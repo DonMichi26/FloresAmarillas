@@ -1141,7 +1141,7 @@ body {
 
 .long-g {
   position: absolute;
-  bottom: 35vmin;
+  bottom: 8vmin;
   left: -42vmin;
   transform-origin: bottom left;
 }
@@ -2241,7 +2241,7 @@ body {
 /* Estilos para el cuadro de mensaje Glassmorphism */
 .glass-card {
   position: absolute;
-  bottom: 35vmin; /* Ajustado para estar sobre el c�sped */
+  bottom: 8vmin; /* Ajustado para estar sobre el c�sped */
   left: 50%;
   transform: translateX(-50%);
   padding: 3vmin 5vmin;
@@ -2390,12 +2390,12 @@ body {
 /* Media Queries - Responsive */
 @media (max-width: 1024px) {
   .flowers { transform: scale(0.75); }
-  .glass-card { bottom: 22vmin; padding: 1.8vmin 3vmin; max-width: 70vw; }
+  .glass-card { bottom: 10vmin; padding: 1.8vmin 3vmin; max-width: 70vw; }
 }
 
 @media (max-width: 768px) {
   .flowers { transform: scale(0.65); }
-  .glass-card { bottom: 18vmin; padding: 1.5vmin 2.5vmin !important; border-radius: 16px !important; }
+  .glass-card { bottom: 10vmin; padding: 1.5vmin 2.5vmin !important; border-radius: 16px !important; }
   .glass-card .card-content h2 { font-size: 4vmin !important; }
   .glass-card .card-content p { font-size: 2.8vmin !important; }
   .glass-card .ribbon-bow { width: 60px; height: 30px; }
@@ -2407,7 +2407,7 @@ body {
   body { min-height: 100vh; overflow-x: hidden; }
   .flowers { transform: scale(0.5); transform-origin: bottom center; }
   .glass-card {
-    bottom: 32vmin;
+    bottom: 12vmin;
     width: 80vw;
     padding: 10px 14px !important;
     border-radius: 16px !important;
@@ -2424,7 +2424,7 @@ body {
 
 @media (max-width: 360px) {
   .flowers { transform: scale(0.42); transform-origin: bottom center; }
-  .glass-card { bottom: 38vmin; padding: 8px 12px !important; width: 85vw; }
+  .glass-card { bottom: 14vmin; padding: 8px 12px !important; width: 85vw; }
   .glass-card .card-content h2 { font-size: 5.5vmin !important; }
   .glass-card .card-content p { font-size: 3.5vmin !important; }
   .glass-card .card-content .highlight { font-size: 3.8vmin !important; }
