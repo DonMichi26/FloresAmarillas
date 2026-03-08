@@ -22,8 +22,8 @@ const startMusic = () => {
     iframe.style.pointerEvents = "none";
 
     // Cargamos el video con los parámetros necesarios para autoplay tras interacción
-    // 9Z-NbQvhzKM es el ID de la canción "Yellow"
-    iframe.src = "https://www.youtube.com/embed/9Z-NbQvhzKM?autoplay=1&mute=0&loop=1&playlist=9Z-NbQvhzKM&enablejsapi=1";
+    // Vicente Fernández - Volver Volver
+    iframe.src = "https://www.youtube.com/embed/u0q3Vz8FkqE?autoplay=1&mute=0&loop=1&playlist=u0q3Vz8FkqE&enablejsapi=1";
     
     bgMusicPlayed = true;
   }
