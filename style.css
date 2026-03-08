@@ -2075,7 +2075,7 @@ body {
 /* Estilos para el cuadro de mensaje Glassmorphism */
 .glass-card {
   position: absolute;
-  bottom: 25vmin; /* Ajustado para estar sobre el césped */
+  bottom: 25vmin; /* Ajustado para estar sobre el cï¿½sped */
   left: 50%;
   transform: translateX(-50%);
   padding: 3vmin 5vmin;
@@ -2116,3 +2116,135 @@ body {
     filter: blur(0);
   }
 }
+
+/* ========================================
+   Tarjeta Glass - Ribbon y Media Queries
+   ======================================== */
+.glass-card .ribbon {
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(90deg, #e91e63, #ff4081, #e91e63);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 10px rgba(233, 30, 99, 0.5);
+}
+
+.glass-card .ribbon-bow {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 40px;
+  z-index: 1001;
+}
+
+.glass-card .ribbon-bow::before,
+.glass-card .ribbon-bow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50% 50% 0 50%;
+  background: linear-gradient(135deg, #ff4081, #e91e63);
+  box-shadow: 0 2px 10px rgba(233, 30, 99, 0.4);
+}
+
+.glass-card .ribbon-bow::before {
+  left: 0;
+  transform: rotate(-15deg);
+}
+
+.glass-card .ribbon-bow::after {
+  right: 0;
+  transform: rotate(15deg) scaleX(-1);
+}
+
+.glass-card .ribbon-bow .center {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff80ab, #e91e63);
+  box-shadow: 0 2px 5px rgba(233, 30, 99, 0.5);
+  z-index: 2;
+}
+
+.glass-card .card-content h2 {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 4.5vmin;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 2vmin 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 200, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.glass-card .card-content p {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 3vmin;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 1vmin 0;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.glass-card .card-content .highlight {
+  font-weight: 500;
+  color: #ffe082;
+  font-size: 3.3vmin;
+  text-shadow: 0 0 15px rgba(255, 224, 130, 0.5);
+  margin-top: 2vmin;
+}
+
+/* Media Queries - Responsive */
+@media (max-width: 1024px) {
+  .flowers { transform: scale(0.75); }
+  .glass-card { bottom: 15vmin; padding: 3.5vmin 5vmin; }
+}
+
+@media (max-width: 768px) {
+  .flowers { transform: scale(0.65); }
+  .glass-card { bottom: 12vmin; padding: 3vmin 4vmin; border-radius: 20px; }
+  .glass-card .card-content h2 { font-size: 5vmin; }
+  .glass-card .card-content p { font-size: 3.5vmin; }
+  .glass-card .ribbon-bow { width: 60px; height: 30px; }
+  .glass-card .ribbon-bow::before,
+  .glass-card .ribbon-bow::after { width: 28px; height: 28px; }
+}
+
+@media (max-width: 480px) {
+  body { min-height: 100vh; overflow-x: hidden; }
+  .flowers { transform: scale(0.5); transform-origin: bottom center; }
+  .glass-card {
+    bottom: 28vmin;
+    width: 85vw;
+    padding: 15px 20px;
+    border-radius: 18px;
+  }
+  .glass-card .ribbon { width: 100px; }
+  .glass-card .ribbon-bow { width: 50px; height: 25px; top: -20px; }
+  .glass-card .ribbon-bow::before,
+  .glass-card .ribbon-bow::after { width: 22px; height: 22px; }
+  .glass-card .ribbon-bow .center { width: 12px; height: 12px; }
+  .glass-card .card-content h2 { font-size: 6vmin; margin-bottom: 10px; }
+  .glass-card .card-content p { font-size: 4vmin; margin: 8px 0; }
+  .glass-card .card-content .highlight { font-size: 4.2vmin; }
+}
+
+@media (max-width: 360px) {
+  .flowers { transform: scale(0.42); transform-origin: bottom center; }
+  .glass-card { bottom: 32vmin; padding: 12px 15px; width: 90vw; }
+  .glass-card .card-content h2 { font-size: 6.5vmin; }
+  .glass-card .card-content p { font-size: 4.5vmin; }
+  .glass-card .card-content .highlight { font-size: 4.8vmin; }
+} 
