@@ -3,28 +3,43 @@ window.addEventListener('load', () => {
   document.body.classList.remove("container");
 });
 
+// Cargar API de YouTube
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+let player;
 let bgMusicPlayed = false;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '1',
+    width: '1',
+    videoId: 'u0q3Vz8FkqE', // Vicente Fernández - Volver Volver
+    playerVars: {
+      'autoplay': 0,
+      'controls': 0,
+      'loop': 1,
+      'playlist': 'u0q3Vz8FkqE',
+      'modestbranding': 1
+    },
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  // El reproductor está listo
+}
 
 const startMusic = () => {
   if (bgMusicPlayed) return;
   
-  const iframe = document.getElementById('bgMusic');
-  if (iframe) {
-    // IMPORTANTE: Los navegadores bloquean iframes en 'display: none'.
-    // Lo hacemos visible pero ínfimo y fuera de la vista.
-    iframe.style.display = "block";
-    iframe.style.position = "fixed";
-    iframe.style.width = "1px";
-    iframe.style.height = "1px";
-    iframe.style.top = "-10px";
-    iframe.style.left = "-10px";
-    iframe.style.opacity = "0.01";
-    iframe.style.pointerEvents = "none";
-
-    // Cargamos el video con los parámetros necesarios para autoplay tras interacción
-    // Vicente Fernández - Volver Volver
-    iframe.src = "https://www.youtube.com/embed/u0q3Vz8FkqE?autoplay=1&mute=0&loop=1&playlist=u0q3Vz8FkqE&enablejsapi=1";
-    
+  if (player && player.playVideo) {
+    player.playVideo();
+    player.setVolume(100);
     bgMusicPlayed = true;
   }
 };
