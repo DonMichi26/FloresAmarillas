@@ -2048,6 +2048,172 @@ body {
   background-color: #e6b800;
 }
 
+/* Flores adicionales 5, 6, 7 */
+.flower--5 {
+  left: 20%;
+  transform: rotate(-10deg);
+  -webkit-animation: moving-flower-5 4s linear infinite;
+  animation: moving-flower-5 4s linear infinite;
+}
+.flower--5 .flower__line {
+  height: 65vmin;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.flower--5 .flower__line__leaf--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.2s backwards;
+  animation: blooming-leaf-right var(--fl-speed) 2.2s backwards;
+}
+.flower--5 .flower__line__leaf--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2s backwards;
+  animation: blooming-leaf-right var(--fl-speed) 2s backwards;
+}
+.flower--5 .flower__line__leaf--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1.8s backwards;
+  animation: blooming-leaf-left var(--fl-speed) 1.8s backwards;
+}
+.flower--5 .flower__line__leaf--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1.6s backwards;
+  animation: blooming-leaf-left var(--fl-speed) 1.6s backwards;
+}
+.flower__leafs--4 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.flower--5 .flower__leaf {
+  background-color: #ffe6e6;
+  background-image: linear-gradient(to top, #ffe6e6, #ffb3b3);
+}
+.flower--5 .flower__leaf--4 {
+  background-image: linear-gradient(to top, #ffe6e6, #ffb3b3);
+}
+.flower--5 .flower__white-circle::after {
+  background-color: #ff6666;
+  background-image: none;
+}
+.flower--5 .flower__leafs::after {
+  background-color: #ff9999;
+}
+
+.flower--6 {
+  left: 30%;
+  transform: rotate(12deg);
+  -webkit-animation: moving-flower-6 4s linear infinite;
+  animation: moving-flower-6 4s linear infinite;
+}
+.flower--6 .flower__line {
+  height: 58vmin;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.flower--6 .flower__line__leaf--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.4s backwards;
+  animation: blooming-leaf-right var(--fl-speed) 2.4s backwards;
+}
+.flower--6 .flower__line__leaf--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.2s backwards;
+  animation: blooming-leaf-right var(--fl-speed) 2.2s backwards;
+}
+.flower--6 .flower__line__leaf--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2s backwards;
+  animation: blooming-leaf-left var(--fl-speed) 2s backwards;
+}
+.flower--6 .flower__line__leaf--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 1.8s backwards;
+  animation: blooming-leaf-left var(--fl-speed) 1.8s backwards;
+}
+.flower__leafs--5 {
+  -webkit-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+}
+.flower--6 .flower__leaf {
+  background-color: #e6f3ff;
+  background-image: linear-gradient(to top, #e6f3ff, #b3d9ff);
+}
+.flower--6 .flower__leaf--4 {
+  background-image: linear-gradient(to top, #e6f3ff, #b3d9ff);
+}
+.flower--6 .flower__white-circle::after {
+  background-color: #66b3ff;
+  background-image: none;
+}
+.flower--6 .flower__leafs::after {
+  background-color: #99ccff;
+}
+
+.flower--7 {
+  left: 70%;
+  transform: rotate(-18deg);
+  -webkit-animation: moving-flower-7 4s linear infinite;
+  animation: moving-flower-7 4s linear infinite;
+}
+.flower--7 .flower__line {
+  height: 62vmin;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.flower--7 .flower__line__leaf--1 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.6s backwards;
+  animation: blooming-leaf-right var(--fl-speed) 2.6s backwards;
+}
+.flower--7 .flower__line__leaf--2 {
+  -webkit-animation: blooming-leaf-right var(--fl-speed) 2.4s backwards;
+  animation: blooming-leaf-right var(--fl-speed) 2.4s backwards;
+}
+.flower--7 .flower__line__leaf--3 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2.2s backwards;
+  animation: blooming-leaf-left var(--fl-speed) 2.2s backwards;
+}
+.flower--7 .flower__line__leaf--4 {
+  -webkit-animation: blooming-leaf-left var(--fl-speed) 2s backwards;
+  animation: blooming-leaf-left var(--fl-speed) 2s backwards;
+}
+.flower__leafs--6 {
+  -webkit-animation-delay: 2.6s;
+  animation-delay: 2.6s;
+}
+.flower--7 .flower__leaf {
+  background-color: #f0e6ff;
+  background-image: linear-gradient(to top, #f0e6ff, #d9b3ff);
+}
+.flower--7 .flower__leaf--4 {
+  background-image: linear-gradient(to top, #f0e6ff, #d9b3ff);
+}
+.flower--7 .flower__white-circle::after {
+  background-color: #cc66ff;
+  background-image: none;
+}
+.flower--7 .flower__leafs::after {
+  background-color: #cc99ff;
+}
+
+@-webkit-keyframes moving-flower-5 {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(-14deg); }
+}
+@keyframes moving-flower-5 {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(-14deg); }
+}
+
+@-webkit-keyframes moving-flower-6 {
+  0%, 100% { transform: rotate(12deg); }
+  50% { transform: rotate(8deg); }
+}
+@keyframes moving-flower-6 {
+  0%, 100% { transform: rotate(12deg); }
+  50% { transform: rotate(8deg); }
+}
+
+@-webkit-keyframes moving-flower-7 {
+  0%, 100% { transform: rotate(-18deg); }
+  50% { transform: rotate(-22deg); }
+}
+@keyframes moving-flower-7 {
+  0%, 100% { transform: rotate(-18deg); }
+  50% { transform: rotate(-22deg); }
+}
+
 /* Estilo para los corazones al hacer clic */
 .click-heart {
   position: absolute;
@@ -2201,22 +2367,37 @@ body {
 .glass-card .card-content .highlight {
   font-weight: 500;
   color: #ffe082;
-  font-size: 3.3vmin;
+  font-size: 2.4vmin;
   text-shadow: 0 0 15px rgba(255, 224, 130, 0.5);
-  margin-top: 2vmin;
+  margin-top: 1.5vmin;
+}
+
+/* Reducir tamaño general */
+.glass-card {
+  padding: 2vmin 3.5vmin !important;
+  max-width: 65vw !important;
+  border-radius: 18px !important;
+}
+
+.glass-card .card-content h2 {
+  font-size: 3.2vmin !important;
+}
+
+.glass-card .card-content p {
+  font-size: 2.2vmin !important;
 }
 
 /* Media Queries - Responsive */
 @media (max-width: 1024px) {
   .flowers { transform: scale(0.75); }
-  .glass-card { bottom: 15vmin; padding: 3.5vmin 5vmin; }
+  .glass-card { bottom: 15vmin; padding: 1.8vmin 3vmin; max-width: 70vw; }
 }
 
 @media (max-width: 768px) {
   .flowers { transform: scale(0.65); }
-  .glass-card { bottom: 12vmin; padding: 3vmin 4vmin; border-radius: 20px; }
-  .glass-card .card-content h2 { font-size: 5vmin; }
-  .glass-card .card-content p { font-size: 3.5vmin; }
+  .glass-card { bottom: 12vmin; padding: 1.5vmin 2.5vmin !important; border-radius: 16px !important; }
+  .glass-card .card-content h2 { font-size: 4vmin !important; }
+  .glass-card .card-content p { font-size: 2.8vmin !important; }
   .glass-card .ribbon-bow { width: 60px; height: 30px; }
   .glass-card .ribbon-bow::before,
   .glass-card .ribbon-bow::after { width: 28px; height: 28px; }
@@ -2227,24 +2408,24 @@ body {
   .flowers { transform: scale(0.5); transform-origin: bottom center; }
   .glass-card {
     bottom: 28vmin;
-    width: 85vw;
-    padding: 15px 20px;
-    border-radius: 18px;
+    width: 80vw;
+    padding: 10px 14px !important;
+    border-radius: 16px !important;
   }
   .glass-card .ribbon { width: 100px; }
   .glass-card .ribbon-bow { width: 50px; height: 25px; top: -20px; }
   .glass-card .ribbon-bow::before,
   .glass-card .ribbon-bow::after { width: 22px; height: 22px; }
   .glass-card .ribbon-bow .center { width: 12px; height: 12px; }
-  .glass-card .card-content h2 { font-size: 6vmin; margin-bottom: 10px; }
-  .glass-card .card-content p { font-size: 4vmin; margin: 8px 0; }
-  .glass-card .card-content .highlight { font-size: 4.2vmin; }
+  .glass-card .card-content h2 { font-size: 5vmin !important; margin-bottom: 8px; }
+  .glass-card .card-content p { font-size: 3.2vmin !important; margin: 6px 0; }
+  .glass-card .card-content .highlight { font-size: 3.5vmin !important; }
 }
 
 @media (max-width: 360px) {
   .flowers { transform: scale(0.42); transform-origin: bottom center; }
-  .glass-card { bottom: 32vmin; padding: 12px 15px; width: 90vw; }
-  .glass-card .card-content h2 { font-size: 6.5vmin; }
-  .glass-card .card-content p { font-size: 4.5vmin; }
-  .glass-card .card-content .highlight { font-size: 4.8vmin; }
+  .glass-card { bottom: 32vmin; padding: 8px 12px !important; width: 85vw; }
+  .glass-card .card-content h2 { font-size: 5.5vmin !important; }
+  .glass-card .card-content p { font-size: 3.5vmin !important; }
+  .glass-card .card-content .highlight { font-size: 3.8vmin !important; }
 } 
