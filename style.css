@@ -17,7 +17,11 @@ body {
   min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
+  overflow-x: hidden;
   perspective: 1000px;
+}
+html {
+  overflow-x: hidden;
 }
 .night {
   position: fixed;
@@ -194,8 +198,8 @@ body {
   width: 8vmin;
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
-  background-color: #e6f331;
-  background-image: linear-gradient(to top, #e6f331, #e6f331);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -215,7 +219,7 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #e6f331, #e6f331);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
   z-index: 1;
   opacity: 0.8;
 }
@@ -405,16 +409,17 @@ body {
 .flower__light {
   position: absolute;
   bottom: 0vmin;
-  width: 1vmin;
-  height: 1vmin;
-  background-color: rgb(255, 251, 0);
+  width: 1.6vmin;
+  height: 1.6vmin;
+  background-color: #ffd700;
   border-radius: 50%;
-  filter: blur(0.2vmin);
+  filter: blur(0.1vmin);
+  box-shadow: 0 0 8px 2px rgba(255, 215, 0, 0.7);
   -webkit-animation: light-ans 4s linear infinite backwards;
   animation: light-ans 4s linear infinite backwards;
 }
 .flower__light:nth-child(odd) {
-  background-color: #028137;
+  background-color: #fff176;
 }
 .flower__light--1 {
   left: -2vmin;
@@ -455,6 +460,36 @@ body {
   left: -6vmin;
   -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s;
+}
+.flower__light--9 {
+  left: -9vmin;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.flower__light--10 {
+  left: 9vmin;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.flower__light--11 {
+  left: -12vmin;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+.flower__light--12 {
+  left: 12vmin;
+  -webkit-animation-delay: 3.2s;
+  animation-delay: 3.2s;
+}
+.flower__light--13 {
+  left: -8vmin;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.flower__light--14 {
+  left: 8vmin;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
 }
 .flower__grass {
   --c: #028137;
@@ -1986,66 +2021,66 @@ body {
 /* Nuevos colores para las flores */
 /* Flor 1: Tonos rojos/rosados */
 .flower--1 .flower__leaf {
-  background-color: #ff3366;
-  background-image: linear-gradient(to top, #ff3366, #ff6699);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--1 .flower__leaf--4 {
-  background-image: linear-gradient(to top, #ff3366, #ff6699);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--1 .flower__white-circle::after {
-  background-color: #ffb3c6;
+  background-color: #ffb300;
   background-image: none;
 }
 .flower--1 .flower__leafs::after {
-  background-color: #ff0040;
+  background-color: #ffc400;
 }
 
 /* Flor 2: Tonos morados/lilas */
 .flower--2 .flower__leaf {
-  background-color: #9933ff;
-  background-image: linear-gradient(to top, #9933ff, #cc99ff);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--2 .flower__leaf--4 {
-  background-image: linear-gradient(to top, #9933ff, #cc99ff);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--2 .flower__white-circle::after {
-  background-color: #e6ccff;
+  background-color: #ffb300;
   background-image: none;
 }
 .flower--2 .flower__leafs::after {
-  background-color: #6600cc;
+  background-color: #ffc400;
 }
 
 /* Flor 3: Tonos naranjas */
 .flower--3 .flower__leaf {
-  background-color: #ff6600;
-  background-image: linear-gradient(to top, #ff6600, #ff9933);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--3 .flower__leaf--4 {
-  background-image: linear-gradient(to top, #ff6600, #ff9933);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--3 .flower__white-circle::after {
-  background-color: #ffcc99;
+  background-color: #ffb300;
   background-image: none;
 }
 .flower--3 .flower__leafs::after {
-  background-color: #cc5200;
+  background-color: #ffc400;
 }
 
 /* Flor 4: Tonos amarillos claros y blancos */
 .flower--4 .flower__leaf {
-  background-color: #ffffcc;
-  background-image: linear-gradient(to top, #ffffcc, #ffffff);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--4 .flower__leaf--4 {
-  background-image: linear-gradient(to top, #ffffcc, #ffffff);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--4 .flower__white-circle::after {
-  background-color: #ffea00;
+  background-color: #ffb300;
   background-image: none;
 }
 .flower--4 .flower__leafs::after {
-  background-color: #e6b800;
+  background-color: #ffc400;
 }
 
 /* Flores adicionales 5, 6, 7 */
@@ -2081,18 +2116,18 @@ body {
   animation-delay: 2s;
 }
 .flower--5 .flower__leaf {
-  background-color: #ffe6e6;
-  background-image: linear-gradient(to top, #ffe6e6, #ffb3b3);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--5 .flower__leaf--4 {
-  background-image: linear-gradient(to top, #ffe6e6, #ffb3b3);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--5 .flower__white-circle::after {
-  background-color: #ff6666;
+  background-color: #ffb300;
   background-image: none;
 }
 .flower--5 .flower__leafs::after {
-  background-color: #ff9999;
+  background-color: #ffc400;
 }
 
 .flower--6 {
@@ -2127,18 +2162,18 @@ body {
   animation-delay: 2.3s;
 }
 .flower--6 .flower__leaf {
-  background-color: #e6f3ff;
-  background-image: linear-gradient(to top, #e6f3ff, #b3d9ff);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--6 .flower__leaf--4 {
-  background-image: linear-gradient(to top, #e6f3ff, #b3d9ff);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--6 .flower__white-circle::after {
-  background-color: #66b3ff;
+  background-color: #ffb300;
   background-image: none;
 }
 .flower--6 .flower__leafs::after {
-  background-color: #99ccff;
+  background-color: #ffc400;
 }
 
 .flower--7 {
@@ -2173,18 +2208,18 @@ body {
   animation-delay: 2.6s;
 }
 .flower--7 .flower__leaf {
-  background-color: #f0e6ff;
-  background-image: linear-gradient(to top, #f0e6ff, #d9b3ff);
+  background-color: #ffd700;
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--7 .flower__leaf--4 {
-  background-image: linear-gradient(to top, #f0e6ff, #d9b3ff);
+  background-image: linear-gradient(to top, #ffd700, #ffe14d);
 }
 .flower--7 .flower__white-circle::after {
-  background-color: #cc66ff;
+  background-color: #ffb300;
   background-image: none;
 }
 .flower--7 .flower__leafs::after {
-  background-color: #cc99ff;
+  background-color: #ffc400;
 }
 
 @-webkit-keyframes moving-flower-5 {
@@ -2428,4 +2463,42 @@ body {
   .glass-card .card-content h2 { font-size: 5.5vmin !important; }
   .glass-card .card-content p { font-size: 3.5vmin !important; }
   .glass-card .card-content .highlight { font-size: 3.8vmin !important; }
+}
+
+/* Logo Ortega en la esquina */
+.logo-corner {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 500;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.logo-corner img {
+  width: 110px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+}
+
+@media (max-width: 768px) {
+  .logo-corner { top: 12px; right: 12px; }
+  .logo-corner img { width: 80px; }
+}
+
+/* Chispa brillante generada por JS */
+.spark {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 150;
+  box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.6);
+  animation: spark-rise 3s ease-in forwards;
+}
+
+@keyframes spark-rise {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.7); }
+  15% { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--dx), -55vh) scale(1.1); }
 } 

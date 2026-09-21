@@ -60,3 +60,25 @@ window.addEventListener('click', function(e) {
     heart.remove();
   }, 1000);
 });
+
+// Partículas brillantes que suben desde las flores
+const sparkColors = ['#ffd700', '#ffe14d', '#fff176'];
+
+const spawnSpark = () => {
+  const spark = document.createElement('span');
+  spark.className = 'spark';
+  spark.style.left = (2 + Math.random() * 96) + 'vw';
+  spark.style.bottom = (Math.random() * 45) + 'vh';
+  spark.style.width = spark.style.height = (3 + Math.random() * 6) + 'px';
+  spark.style.background = sparkColors[Math.floor(Math.random() * sparkColors.length)];
+  spark.style.setProperty('--dx', (Math.random() * 80 - 40) + 'px');
+  spark.style.animationDuration = (2.5 + Math.random() * 2.5) + 's';
+  spark.style.animationDelay = (Math.random() * 0.6) + 's';
+  document.body.appendChild(spark);
+  spark.addEventListener('animationend', () => spark.remove(), { once: true });
+};
+
+window.addEventListener('load', () => {
+  for (let i = 0; i < 12; i++) spawnSpark();
+  setInterval(spawnSpark, 200);
+});
